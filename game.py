@@ -46,9 +46,11 @@ def main():
 
         if game.check_win(current_player):
             print(f'Победили {current_player}.')
+            game.save_result(f'Победили {current_player}.')
             running = False
         elif game.is_board_full():
             print('Ничья!')
+            game.save_result('Ничья!')
             running = False
 
         current_player = 'O' if current_player == 'X' else 'X'

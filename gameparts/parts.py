@@ -30,3 +30,7 @@ class Board:
         ):
             return True
         return False
+
+    def save_result(self, result):
+        with open('results.txt', 'a', encoding='utf-8') as f:
+            f.write(result + '\n')
